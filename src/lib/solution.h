@@ -10,6 +10,7 @@ class Solution {
 public:
   std::string PrintHelloWorld();
   double FindMedian(vector<int> inputs);
+  int Factorial(int n);
 };
 
 #endif

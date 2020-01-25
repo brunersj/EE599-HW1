@@ -27,5 +27,11 @@ int main()
     cout << "inputs: {-1}, Median: " << solution.FindMedian(inputs4) << endl;
     // empty vector
     cout << "inputs: {}, Median: " << solution.FindMedian(inputs5) << endl;
+
+    cout << "Enter a number > 0 to compute factorial: ";
+    int n = 0;
+    cin >> n;
+    cout << "Output: " << solution.Factorial(n) << endl;
+
     return EXIT_SUCCESS;
 }
