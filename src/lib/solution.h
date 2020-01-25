@@ -3,10 +3,13 @@
 
 #include <string>
 #include <vector>
+#include <algorithm>
+using namespace std;
 
 class Solution {
 public:
   std::string PrintHelloWorld();
+  double FindMedian(vector<int> inputs);
 };
 
 #endif
