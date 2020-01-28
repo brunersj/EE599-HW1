@@ -4,13 +4,15 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-using namespace std;
+using std::vector;
 
 class Solution {
 public:
-  std::string PrintHelloWorld();
+  void PrintName();
+  void PrintAge();
   double FindMedian(vector<int> inputs);
-  int Factorial(int n);
+  int RecursiveFactorial(int n);
+  int NonRecursiveFactorial(int n);
 };
 
 #endif

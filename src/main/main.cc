@@ -1,11 +1,12 @@
 #include <iostream>
 #include "src/lib/solution.h"
 #include <vector>
-
+using std::cout, std::endl, std::cin;
 int main()
 {
     Solution solution ;
-    //std::cout << solution.PrintHelloWorld() << std::endl;
+    solution.PrintName();
+    solution.PrintAge();
 
     vector<int> inputs = {1, 2, 3, 5};
     vector<int> inputs1 = {1, 2, 3, 5, 8};
@@ -31,7 +32,13 @@ int main()
     cout << "Enter a number > 0 to compute factorial: ";
     int n = 0;
     cin >> n;
-    cout << "Output: " << solution.Factorial(n) << endl;
+    while(n < 0){
+        cout << "Invalid input. Please input number > 0" << endl;
+        cin >> n;
+    }
+
+    cout << "Recursive Output: " << solution.RecursiveFactorial(n) << endl;
+    cout << "Non-Recursive Output: " << solution.NonRecursiveFactorial(n) << endl;
 
     return EXIT_SUCCESS;
 }

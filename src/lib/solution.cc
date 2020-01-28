@@ -1,11 +1,15 @@
 #include "solution.h"
 #include <iostream>
-using namespace std;
+using std::vector;
 
-std::string Solution::PrintHelloWorld() { 
-  return "**** Hello World ****"; 
+void Solution::PrintName() { 
+  std::cout << "Name: Sam Bruner" << std::endl;; 
+}
+void Solution::PrintAge(){
+  std::cout << "Age: 22" << std::endl;
 }
 
+//Question 3
 // Find median of non-negative vector
 double Solution::FindMedian(vector<int> inputs){
 
@@ -37,11 +41,31 @@ double Solution::FindMedian(vector<int> inputs){
 
 } // End find median
 
-int Solution::Factorial(int n) {
-
-  if (n > 1)
-    return n * Factorial(n-1);
-  else
+// Question 6
+int Solution::RecursiveFactorial(int n) {
+  if (n < 0){ // invalid input
+    return -1;
+  }
+  else if (n == 0 || n == 1) // base case
     return 1;
+  else
+    return n * RecursiveFactorial(n-1);
+}
 
+int Solution::NonRecursiveFactorial(int n) {
+  int factorial = 1;
+  if (n < 0){ // invalid input
+    return -1;
+  }
+  // base case
+  else if (n == 0 || n == 1){
+    return factorial;
+  }
+  else{
+    while(n > 1){
+      factorial *= n;
+      n--;
+    }
+    return factorial;
+  }
 }
